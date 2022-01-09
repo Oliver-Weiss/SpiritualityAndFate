@@ -56,3 +56,12 @@ C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\s
 C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\staticwebassets\SpiritualityAndFate.StaticWebAssets.xml
 C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\SpiritualityAndFate.dll
 C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\SpiritualityAndFate.pdb
+C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\Razor\Views\Game\Cave.cshtml.g.cs
+C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\Razor\Views\Game\Inventory.cshtml.g.cs
+C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\Razor\Views\Player\Age.cshtml.g.cs
+C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\Razor\Views\Player\Leave.cshtml.g.cs
+C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\Razor\Views\Player\LogReg.cshtml.g.cs
+C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\Razor\Views\Player\Species.cshtml.g.cs
+C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\Razor\Views\Player\Starting.cshtml.g.cs
+C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\Razor\Views\Player\_Login.cshtml.g.cs
+C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\Razor\Views\Player\_Registration.cshtml.g.cs
