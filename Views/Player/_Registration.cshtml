@@ -1,0 +1,19 @@
+@model Player
+<form asp-action="registration" asp-controller="Player" method="post">
+    <span asp-validation-for="Username"></span>
+    <br/>
+    <label asp-for="Username"></label>
+    <input asp-for="Username" class="inp">
+    <br/>
+    <span asp-validation-for="Password"></span>
+    <br/>
+    <label asp-for="Password"></label>
+    <input asp-for="Password" class="inp">
+    <br/>
+    <span asp-validation-for="Confirm"></span>
+    <br/>
+    <label asp-for="Confirm">Confirm Password</label>
+    <input asp-for="Confirm" class="inp">
+    <br/>
+    <input value="Register" type="submit" class="btn">
+</form>

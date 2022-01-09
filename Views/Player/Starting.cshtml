@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<body>
+    @model Player
+        <div class="center">
+            <h1><i>What is your name?</i></h1>
+            <form asp-action="naming" asp-controller="Player" method="post">
+                <span asp-validation-for="Name"></span>
+                <br/>
+                <input asp-for="Name" value="Moonshine" class="inp">
+                <br/>
+                <input type="submit" value="Speak" class="btn">
+            </form>
+        </div>
+</body>
+</html>

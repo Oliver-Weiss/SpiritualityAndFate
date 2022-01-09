@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>. . .</title>
+</head>
+<body>
+    <div class="center">
+        @if (ViewBag.Player.AgeRange == "Childhood")
+        {
+            <h1><i>In your childhood...? What a tragedy.</i></h1>
+        }
+        else if (ViewBag.Player.AgeRange == "Teen Years")
+        {
+            <h1><i>In your teen years? That's tragically young... Just what were you getting up to?</i></h1>
+        }
+        else if (ViewBag.Player.AgeRange == "Adulthood")
+        {
+            <h1><i>Adulthood isn't too young to die... I hope you don't have any regrets.</i></h1>
+        }
+        else
+        {
+            <h1><i>Your elderly years... How admirable.</i></h1>
+        }
+        <h1><i>Now... which animal do you more closely relate to?</i></h1>
+        @model Player
+        <form asp-action="transform" asp-controller="Player" method="post">
+            <select asp-for="Species" class="inp">
+                <option value="Cat" class="inp">Cat</option>
+                <option value="Dog" class="inp">Dog</option>
+            </select>
+            <br/>
+            <input type="submit" value="Speak" class="btn">
+        </form>
+    </div>
+</body>
+</html>

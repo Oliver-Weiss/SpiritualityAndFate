@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.</title>
+</head>
+<body>
+    @model Player
+    <div class="center">
+        <h1><i>@ViewBag.Player.Name, hm? What a fascinating name, little one. Pray tell, what time of your life were you in?</i></h1>
+        <form asp-action="timeoflife" asp-controller="Player" method="post">
+            <select asp-for="AgeRange" class="inp">
+                <option value="Childhood" class="inp">Childhood</option>
+                <option value="Teen Years" class="inp">Teen Years</option>
+                <option value="Adulthood" class="inp">Adulthood</option>
+                <option value="Elder Years" class="inp">Elder Years</option>
+            </select>
+            <br/>
+            <input type="submit" value="Speak" class="btn">
+        </form>
+    </div>
+</body>
+</html>
