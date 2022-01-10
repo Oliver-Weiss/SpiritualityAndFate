@@ -7,7 +7,11 @@ namespace SpiritualityAndFate.Models
     {
         [Key]
         public int ItemId { get; set; }
+
+        [Required]
         public string Title { get; set; }
+
+        [Required]
         public string Description { get; set; }
         public int PlayerId { get; set; }
         public Player Owner { get; set; }

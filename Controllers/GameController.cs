@@ -28,6 +28,9 @@ namespace TestGame.Controllers
             }
             ViewBag.Player =  _context.Players
                 .FirstOrDefault(player => player.PlayerId == HttpContext.Session.GetInt32("loggedInPlayer"));
+
+            ViewBag.LoggedInPlayer = _context.Players
+                .FirstOrDefault(p => p.PlayerId == (int)HttpContext.Session.GetInt32("loggedInPlayer"));
             return View();
         }
 
@@ -41,6 +44,36 @@ namespace TestGame.Controllers
             ViewBag.Player =  _context.Players
                 .FirstOrDefault(player => player.PlayerId == HttpContext.Session.GetInt32("loggedInPlayer"));
             return View();
+        }
+
+        [HttpGet("itemcreation")]
+        public IActionResult ItemCreation()
+        {
+            if(HttpContext.Session.GetInt32("loggedInPlayer") == null)
+            {
+                return Redirect("/");
+            }
+            if (HttpContext.Session.GetInt32("loggedInPlayer") != 1)
+            {
+                return Redirect("/homebase");
+            }
+            return View();
+        }
+
+        [HttpPost("Game/playinggod")]
+        public IActionResult NewItem(Item newItem)
+        {
+            if (ModelState.IsValid)
+            {
+                newItem.PlayerId = (int)HttpContext.Session.GetInt32("loggedInPlayer");
+                _context.Items.Add(newItem);
+                _context.SaveChanges();
+                return RedirectToAction("Cave");
+            }
+            else
+            {
+                return View("ItemCreation");
+            }
         }
     }
 }

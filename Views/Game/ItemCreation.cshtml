@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Creation</title>
+</head>
+<body>
+    <h1>New Item!</h1>
+    @model Item
+    <form asp-action="playinggod" asp-controller="Game" method="post">
+        <span asp-validation-for="Title"></span>
+        <br/>
+        <label asp-for="Title"></label>
+        <input asp-for="Title">
+        <br/>
+        <span asp-validation-for="Description"></span>
+        <br/>
+        <label asp-for="Description"></label>
+        <input asp-for="Description">
+        <br/>
+        <input value="Create Item" type="submit" class="btn">
+    </form>
+</body>
+</html>
