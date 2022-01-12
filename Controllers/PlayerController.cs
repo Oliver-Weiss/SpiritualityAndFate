@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 
 namespace SpiritualityAndFate.Controllers
 {
@@ -164,9 +165,18 @@ namespace SpiritualityAndFate.Controllers
                 return Redirect("/");
             }
              Player RetrievedPlayer = _context.Players
+                .Include(i => i.Inventory)
                 .FirstOrDefault(player => player.PlayerId == HttpContext.Session.GetInt32("loggedInPlayer"));
 
             ViewBag.Player =  RetrievedPlayer;
+
+            if (RetrievedPlayer.Inventory.Count == 0)
+            {
+                RetrievedPlayer.Inventory.Add(_context.Items.FirstOrDefault(i => i.ItemId == 1));
+                RetrievedPlayer.Inventory.Add(_context.Items.FirstOrDefault(i => i.ItemId == 2));
+                RetrievedPlayer.Inventory.Add(_context.Items.FirstOrDefault(i => i.ItemId == 3));
+                _context.SaveChanges();
+            }
             return View();
         }
     }

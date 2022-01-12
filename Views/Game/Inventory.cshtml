@@ -7,9 +7,12 @@
     <title>@ViewBag.Player.Name's Inventory</title>
 </head>
 <body>
-    <p>* Raw Meat</p>
-    <p>* Necklace</p>
-    <p>* Healing Salve</p>
+    <h1><u>Inventory</u></h1>
+    @foreach (var item in ViewBag.Player.Inventory)
+    {
+       <p><a href="">* @item.Title</a></p>
+    }
+    <hr/>
     <a href="/homebase">Back</a>
 </body>
 </html>

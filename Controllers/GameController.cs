@@ -42,7 +42,8 @@ namespace TestGame.Controllers
                 return Redirect("/");
             }
             ViewBag.Player =  _context.Players
-                .FirstOrDefault(player => player.PlayerId == HttpContext.Session.GetInt32("loggedInPlayer"));
+            .Include(i => i.Inventory)
+            .FirstOrDefault(player => player.PlayerId == HttpContext.Session.GetInt32("loggedInPlayer"));
             return View();
         }
 
