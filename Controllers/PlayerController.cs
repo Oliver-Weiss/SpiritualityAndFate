@@ -87,6 +87,12 @@ namespace SpiritualityAndFate.Controllers
             {
                 return Redirect("/");
             }
+            Player RetrievedPlayer = _context.Players
+                .FirstOrDefault(player => player.PlayerId == HttpContext.Session.GetInt32("loggedInPlayer"));
+            
+            if (RetrievedPlayer.Species != null) {
+                return Redirect("/homebase");
+            }
             return View();
         }
 
