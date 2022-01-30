@@ -66,3 +66,11 @@ C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\R
 C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\Razor\Views\Player\_Login.cshtml.g.cs
 C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\Razor\Views\Player\_Registration.cshtml.g.cs
 C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\Razor\Views\Game\ItemCreation.cshtml.g.cs
+C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\Razor\Views\Game\ItemView.cshtml.g.cs
+C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\Razor\Views\Game\Outside.cshtml.g.cs
+C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\Razor\Views\Game\Plains.cshtml.g.cs
+C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\Razor\Views\Game\Dinner.cshtml.g.cs
+C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\Razor\Views\Game\Gratitude.cshtml.g.cs
+C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\Razor\Views\Game\Woods.cshtml.g.cs
+C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\Razor\Views\Game\HelpingHands.cshtml.g.cs
+C:\Users\studi\Desktop\Bootcamp\C#\SpiritualityAndFate\obj\Debug\netcoreapp3.1\Razor\Views\Game\Mountains.cshtml.g.cs

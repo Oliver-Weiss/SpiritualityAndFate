@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outside Cave</title>
+</head>
+<body>
+    @if (@ViewBag.Inventory.Title == "Raw Meat")
+    {
+        <p>To your left, there is a clear grassy plain. The grass looks so comforting... You can feel something both unfamiliar and welcoming pulling you to walk in that direction.</p>
+        <center><a href="/plains">Go Towards The Plains</a></center>
+    }
+    @if(@ViewBag.Inventory.Title == "Necklace")
+    {
+        <p>In front of you, the woods stretches out. It's a bit dark and gloomy, but... You somehow don't feel too scared. Quite the opposite, in fact. You feel like you could take on the world.</p>
+        <center><a href="/woods"><p> Go Towards the Woods</p></a></center>
+    }
+    @if(@ViewBag.Inventory.Title == "Healing Salve")
+    {
+        <p>To your right, the mountains tower above the entirety of the world. Finding nothing else to do, you figure you might as well explore them. Surely, there'd be plenty of caves for shelter on your journey?</p>
+        <center><a href="/mountains"><p>Go Towards the Mountains</p></a></center>
+    }
+    <a href="/homebase"><p> Go Back Inside</p></a>
+</body>
+</html>

@@ -76,5 +76,149 @@ namespace TestGame.Controllers
                 return View("ItemCreation");
             }
         }
+        
+        [HttpGet("{ItemId}")]
+        public IActionResult ItemView(int ItemId)
+        {
+            if (HttpContext.Session.GetInt32("loggedInPlayer") == null)
+            {
+                return Redirect("/");
+            }
+            Item selected = _context.Items
+                .Include(item => item.Owner)
+                .FirstOrDefault(item => item.ItemId == ItemId);
+
+            return View(selected);
+        }
+
+        [HttpGet("outside")]
+        public IActionResult Outside()
+        {
+            if (HttpContext.Session.GetInt32("loggedInPlayer") == null)
+            {
+                return Redirect("/");
+            }
+
+            ViewBag.Inventory =  _context.Items
+                .Include(i => i.Owner)
+                .FirstOrDefault(item => item.PlayerId == HttpContext.Session.GetInt32("loggedInPlayer"));
+            return View();
+        }
+
+        // GAMEPLAY SECTION
+        [HttpGet("plains")]
+        public IActionResult Plains()
+        {
+            if (HttpContext.Session.GetInt32("loggedInPlayer") == null)
+            {
+                return Redirect("/");
+            }
+
+            ViewBag.Player = _context.Players
+                .Include(i => i.Inventory)
+                .FirstOrDefault(player => player.PlayerId == HttpContext.Session.GetInt32("loggedInPlayer"));
+            return View();
+        }
+
+        [HttpGet("givefood")]
+        public IActionResult GiveFood()
+        {
+            Player RetrievedPlayer = _context.Players
+                .Include(i => i.Inventory)
+                .FirstOrDefault(player => player.PlayerId == HttpContext.Session.GetInt32("loggedInPlayer"));
+
+            RetrievedPlayer.Inventory.Remove(_context.Items.FirstOrDefault(i => i.Title == "Raw Meat"));
+            _context.SaveChanges();
+
+            return Redirect("/dinner");
+        }
+
+        [HttpGet("dinner")]
+        public IActionResult Dinner()
+        {
+            if (HttpContext.Session.GetInt32("loggedInPlayer") == null)
+            {
+                return Redirect("/");
+            }
+
+            ViewBag.Player = _context.Players
+                .Include(i => i.Inventory)
+                .FirstOrDefault(player => player.PlayerId == HttpContext.Session.GetInt32("loggedInPlayer"));
+            return View();
+        }
+
+        [HttpGet("woods")]
+         public IActionResult Woods()
+        {
+            if (HttpContext.Session.GetInt32("loggedInPlayer") == null)
+            {
+                return Redirect("/");
+            }
+            return View();
+        }
+
+        [HttpGet("usenecklace")]
+        public IActionResult UseNecklace()
+        {
+            Player RetrievedPlayer = _context.Players
+                .Include(i => i.Inventory)
+                .FirstOrDefault(player => player.PlayerId == HttpContext.Session.GetInt32("loggedInPlayer"));
+
+            RetrievedPlayer.Inventory.Remove(_context.Items.FirstOrDefault(i => i.Title == "Necklace"));
+            _context.SaveChanges();
+
+            return Redirect("/gratitude");
+        }
+
+        [HttpGet("gratitude")]
+        public IActionResult Gratitude()
+        {
+            if (HttpContext.Session.GetInt32("loggedInPlayer") == null)
+            {
+                return Redirect("/");
+            }
+
+            ViewBag.Player = _context.Players
+                .Include(i => i.Inventory)
+                .FirstOrDefault(player => player.PlayerId == HttpContext.Session.GetInt32("loggedInPlayer"));
+            return View();
+        }
+
+        [HttpGet("mountains")]
+         public IActionResult Mountains()
+        {
+            if (HttpContext.Session.GetInt32("loggedInPlayer") == null)
+            {
+                return Redirect("/");
+            }
+            return View();
+        }
+
+        [HttpGet("applysalve")]
+        public IActionResult ApplySalve()
+        {
+            Player RetrievedPlayer = _context.Players
+                .Include(i => i.Inventory)
+                .FirstOrDefault(player => player.PlayerId == HttpContext.Session.GetInt32("loggedInPlayer"));
+
+            RetrievedPlayer.Inventory.Remove(_context.Items.FirstOrDefault(i => i.Title == "Healing Salve"));
+            _context.SaveChanges();
+
+            return Redirect("/helpinghands");
+        }
+
+        [HttpGet("helpinghands")]
+        public IActionResult HelpingHands()
+        {
+            if (HttpContext.Session.GetInt32("loggedInPlayer") == null)
+            {
+                return Redirect("/");
+            }
+
+            ViewBag.Player = _context.Players
+                .Include(i => i.Inventory)
+                .FirstOrDefault(player => player.PlayerId == HttpContext.Session.GetInt32("loggedInPlayer"));
+            return View();
+        }
     }
 }

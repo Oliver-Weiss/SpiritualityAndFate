@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration & Login</title>
+    <title>@Model.Title</title>
 </head>
 <body>
-    <div id="logreg">
-        <h1>Registration</h1>
-        <partial name="_Registration.cshtml" />
-        <h1>Login</h1>
-        <partial name="_Login.cshtml" />
-    </div>
+    @model Item
+    <h1>@Model.Title</h1>
+    <p><i>@Model.Description</i></p>
+    <a href="/inventory"><p>Back</p></a>
 </body>
-
 </html>
