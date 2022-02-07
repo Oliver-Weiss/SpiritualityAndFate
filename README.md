@@ -1,1 +1,1 @@
-This is a neat little, short-term test game I'm creating to figure some things out! More information will be added here as it gets developed and fleshed out. Thank you for the interest!
+This is a neat little, short-term test game I'm creating to figure some things out! More information will be added here as it gets developed and fleshed out. There's not too much to say about it, as it's not a fully fleshed-out project. I just tested what I could do. Expect more detailed projects to come! ♥
